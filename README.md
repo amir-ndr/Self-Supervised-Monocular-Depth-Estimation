@@ -21,9 +21,14 @@ Please download and preprocess the KITTI dataset as [Monodepth2](https://github.
 
 ## BackBones
 For some tasks like autonomous driving and robotics navigation, we have to lighten the model. For this purpose we used backbones like `resnet18`, `stdcNet` and `darknet`. Also in [JETCO](https://en.jetco.co/), we had a small pist for self-driving car task and we also trained our model on pist. you can see the evaluation in the table below:
-! [Evaluation] ()
+<p align="center">
+  <img src="pic2.png" alt="Evaluation" width="600" />
+</p>
+
 Now see an example of predicting depth map of our pist image (backbone is `resnet18` and the model is trained on KITTI datadet):
-! [Prediction] ()
+<p align="center">
+  <img src="pic3.png" alt="Prediction" width="600" />
+</p>
 
 ## Acknowledgements
 
