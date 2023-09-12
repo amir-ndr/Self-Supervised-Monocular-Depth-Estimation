@@ -11,7 +11,9 @@ The model is an unsupervised model consisting of two networks, one for estimatin
 
 Pose estimation refers to estimating the location of an object (more precisely, a pixel) in the next frame. This means that there is a sequence of frames that tracks the motion of an object, and the goal of pose estimation is to estimate the location of that object in the next frame. The depth estimation part predicts the depth map of a frame and obtains the depth for all pixels. This model is derived from the [DiPE](https://github.com/HalleyJiang/DiPE) model but achieved better results by specifically modifying loss functions, especially in critical situations such as occlusion and object motion in the opposite direction of camera movement (e.g., when a car moves in the opposite direction of the camera).
 You can see the overall network architecture below:
-! [Model architucture](https://raw.githubusercontent.com/amir-ndr/Self-Supervised-Monocular-Depth-Estimation/main/arch.png)
+<p align="center">
+  <img src="arch.png" alt="Model Architucture" width="600" />
+</p>
 
 ## Dataset
 this model has been trained on the KITTI dataset in an unsupervised manner. This dataset is 175 gigabytes in size and consists of images with dimensions of (1242x375) in PNG format. The dataset has two well-known splits called "kitti_benchmark" and "kitti_eigen," which are used for training. These splits determine how the scenes of road recording are divided and how the images are input into the network. Our sequence frames consist of three images, and pose estimation is performed using these three images.
